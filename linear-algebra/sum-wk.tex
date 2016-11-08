@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+\usepackage[normalem]{ulem}
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{align*}
+        \omega_0, \omega_1, \dots, \omega_{71} = \sqrt[72]{1}\\
+        \omega_k = \cos{\frac{2k\pi}{72}} + \imath\sin{\frac{2k\pi}{72}}\\
+        \omega_0 ^ {389} + \omega_1 ^ {389} + \dots + \omega_{71} ^ {389} = ?\\
+        \omega_0 ^ {389} + \omega_1 ^ {389} + \dots + \omega_{71} ^ {389} = \displaystyle\sum_{i=0}^{71} \omega_i ^ {389}\\
+        \omega_k \in \mathbb{C}\\
+        \implies \omega_1 ^ k = \cos{\frac{2k\pi}{72}} + \imath\sin{\frac{2k\pi}{72}} = \omega_k\\
+        \implies \omega_0 ^ {389} + \omega_1 ^ {389} + \dots + \omega_{71} ^ {389} = \omega_0 ^ {389} + \omega_1 ^ {389} + \omega_1 ^ {389 \times 2} + \dots + \omega_{71 \times 71} ^ {389}\\
+        %\implies \omega_0 ^ {389} + \omega_1 ^ {389} + \dots + \omega_{71} ^ {389} =
+        \omega_k = \omega_1 ^ k \implies \displaystyle\sum_{i=0}^{71} \omega_i ^ {389} = \frac{\omega_1 ^ {72} - 1}{\omega_1 - 1}
+    \end{align*}
+\end{document}`
