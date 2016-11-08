@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+\usepackage[normalem]{ulem}
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{align*}
+        z \in \mathbb{C};\quad z + \frac{1}{z} = 2\cos\varphi\\
+        z ^ {81} + \frac{1}{z ^ {81}} =?\, 2\cos{(81\varphi)}
+        z + \frac{1}{z} = 2cos\varphi| \times z\\
+        z^2 + 1 -2z\cos\varphi = 0\\
+        D = 4\cos^2\varphi -4\\
+        D = 4(\cos^2\varphi - 1)\\
+        \sqrt{D} = 2\sqrt{\cos^2\varphi - 1} = 2\sqrt{-\sin^2\varphi}\\
+        z_1,_2 = \frac{\stkout{2}\cos\varphi \pm \stkout{2}\sqrt{-\sin^2\varphi}}{\stkout{2}}\\
+        z_1,_2 = \cos\varphi \pm \sqrt{-1}\sqrt{\sin^2\varphi}\\
+        z_1,_2 = \cos\varphi \pm \imath\sin\varphi\\
+        \frac{1}{z_1,_2} = {z_1,_2} ^{-1} = \cos{-\varphi} \pm \imath\sin{-\varphi} = \cos\varphi \mp \imath\sin\varphi\\
+        z^{81} = \cos{81\varphi} \pm \imath\sin{81\varphi}\\
+        \frac{1}{z^{81}} = \cos{81\varphi} \mp \imath\sin{81\varphi}\\
+        z^{81} + \frac{1}{z^{81}} = \cos{81\varphi} \pm \stkout{\imath\sin{81\varphi}} + \cos{81\varphi} \mp \stkout{\imath\sin{81\varphi}}\\
+        z ^ {81} + \frac{1}{z ^ {81}} = 2\cos{(81\varphi)}
+    \end{align*}
+\end{document}
