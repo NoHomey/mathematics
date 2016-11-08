@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+\usepackage[normalem]{ulem}
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{align*}
+        \text{Algebric form of:} \left(\frac{8 - 4\sqrt3\imath}{2 + 6\sqrt3\imath}\right)^{342} = ?\\
+        \left(\frac{8 - 4\sqrt3\imath}{2 + 6\sqrt3\imath}\right)^{342} =
+        \left(\frac{(8 - 4\sqrt3\imath)(2 - 6\sqrt3\imath)}{(2 + 6\sqrt3\imath)(2 - 6\sqrt3\imath)}\right)^{342} =\\
+        = \left(\frac{16 - 48\sqrt3\imath - 8\sqrt3\imath - 72}{4 + 108}\right)^{342}
+        = \left(\frac{-\stkout{56} - \stkout{56}\sqrt3\imath}{\stkout{112}}\right)^{342} =\\
+        = \left(-\frac{1}{2} -\frac{\sqrt3}{2}\imath\right)^{342} = z ^ {342}\\
+        |z| = \sqrt{\left(-\frac{1}{2}\right) ^ 2 + \left(-\frac{\sqrt3}{2}\right) ^ 2} = \sqrt{\frac{4}{4}} = 1\\
+        z  = |z|\left(\cos\varphi + \imath\sin\varphi\right)\\
+        z ^ n  = |z| ^ n\left(\cos{n\varphi} + \imath\sin{n\varphi}\right)\\
+        z ^ {342} = 1 ^ {342}\left(\cos{\stkout{342}\frac{7}{\stkout{6}}\pi} + \imath\sin{\stkout{342}\frac{7}{\stkout{6}}\pi}\right)\\
+        z ^ {342} = \cos{399\pi} + \imath\sin{399\pi}\\
+        z ^ {342} = \cos{(398\pi + \pi)} + \imath\sin{(398\pi + \pi)}\\
+        z ^ {342} = \cos{\pi} + \imath\sin{\pi} = 1\\
+        \implies \left(\frac{8 - 4\sqrt3\imath}{2 + 6\sqrt3\imath}\right)^{342} = 1
+    \end{align*}
+\end{document}
