@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+\usepackage[normalem]{ulem}
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{align*}
+        \text{Trigonometric form of roots of the equation: } x ^ {263} - 4\sqrt3\imath -4 = 0\\
+            x ^ {263} - 4\sqrt3\imath -4 = 0\\
+            x ^ {263} = 4 + 4\sqrt3\imath = z\\
+            x = \sqrt[263]{z}\\
+            |z| = \sqrt{Re(z) ^ 2 + Im(z) ^ 2}\\
+            z  = |z|\left(\frac{ Re(z) }{|z|} + \frac{Im(z)}{|z|}\imath\right) = |z|\left(\cos\varphi + \imath\sin\varphi\right)\\
+            \sqrt[n]{z}  = |z| ^ \frac{1}{n}\left(\cos{\frac{\varphi}{n}} + \imath\sin{\frac{\varphi}{n}}\right)\\
+            |z| = \sqrt{\left(4\right)^2 + \left(4\sqrt3\right) ^ 2}
+            = \sqrt{16 + 16 \times 3}
+            = \sqrt{4 \times 16} = 2 \times 8\\
+            z = 8\left(\frac{\stkout{4}}{\stkout{8}} + \frac{\stkout{4}\sqrt3}{\stkout{8}}\imath\right) = 8\left(\right)
+            = 8\left(\frac{1}{2} + \frac{\sqrt3}{2}\imath\right)\\
+            x = \sqrt[263]{4 + 4\sqrt3\imath}\\
+    \end{align*}
+\end{document}
