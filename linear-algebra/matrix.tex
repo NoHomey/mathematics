@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+\usepackage[normalem]{ulem}
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{align*}
+        4x_1 + 3x_2 + 3x_3 - 2x_4 = \lambda\\
+        -x_1 - x_2 - x_3 + x_4 = 2\\
+        -19x_1 - 19x_2 - 20x_3 + (11 + \mu)x_4 = 6 - 2\lambda\\
+        4x_1 + 7x_2 + 8x_3 + x_4 = -2\\
+        \\
+        \sim
+        \begin{pmatrix}
+            -4  &   3 &   3 & -2         &  \lambda\\
+            -1  &  -1 &  -1 &  1         &  2\\
+            -19 & -19 & -20 & (11 + \mu) &  6 - 2\lambda | : 19\\
+            4   &   7 & 8   & 1          & -2\\
+        \end{pmatrix}\\
+        \\
+        \sim
+        \begin{pmatrix}
+            -4 &  3 &  3 & -2        &  \lambda\\
+            -1 & -1 & -1 &  1        &  2\\
+            -1 & -1 & \frac{-20}{19}  & \frac{11 + \mu}{19} &  \frac{6 - 2\lambda}{19}\\
+            4  &  7 &  8   & 1         & -2\\
+        \end{pmatrix}\\
+    \end{align*}
+\end{document}`
