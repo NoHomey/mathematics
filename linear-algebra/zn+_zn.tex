@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+\usepackage[normalem]{ulem}
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{align*}
+        (x - \imath) ^ {36} + (x + \imath) ^ {36} = 0\\
+        (x + \imath) ^ {36} = -(x - \imath) ^ {36}\\
+        z_k ^ {36} = -1\\
+        |z_k| = \sqrt{1} = 1\\
+        z_k ^ {36} = \cos\pi + \imath\sin\pi\\
+        z_k = \sqrt[36]{\cos\pi + \imath\sin\pi}\\
+        z_k = \cos{\frac{\pi + 2k\pi}{36}} + \imath\sin{\frac{\pi + 2k\pi}{36}}\\
+        y = z_k,\, k = 0, 1, \dots, 35\\
+        \frac{x + \imath}{x - \imath} = y\\
+        x + \imath = y(x - \imath)\\
+        x + \imath = yx - y\imath\\
+        \imath + y\imath = yx - x\\
+        (1 + y)\imath = (y - 1)x\\
+        x = \frac{(y + 1)\imath}{(y - 1)}
+    \end{align*}
+\end{document}`\grid
