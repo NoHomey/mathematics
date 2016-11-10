@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+\usepackage[normalem]{ulem}
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{math}
+        x^2 + (2 + 2\imath)x - (12 - 18\imath) = 0\\
+        D = (2 + 2\imath)^2 - 4(-(12 - 18\imath))\\
+        D = 4 + 8\imath + 4\imath^2 + 4(12 - 18\imath)\\
+        D = \stkout{4} + 8\imath \stkout{-4} + 48 -  72\imath\\
+        D = 48 - 64\imath\\
+        z \in \mathbb{C} : z = a + b\imath\\
+        z = \sqrt{D} | \uparrow ^ 2\\
+        z ^ 2 = D = 48 - 64\imath\\
+        a ^ 2 - b ^ 2 + 2ab\imath = 48 - 64\imath\\
+        \\
+        \begin{array}{lcl}
+            a ^ 2 - b ^ 2 & = & 48\\
+            2ab\imath & = & -64\imath
+        \end{array}\\
+        \\
+        \\
+        \begin{array}{lcl}
+            a ^ 2 - b ^ 2 & = & 48\\
+            a & = & \frac{-32}{b}
+        \end{array}\\
+        \\
+        a ^ 2 - b ^ 2 = 48\\
+        \left(\frac{-32}{b}\right)^ 2 - b ^ 2 = 48\\
+        b ^ 2 - \left(\frac{-32}{b}\right)^ 2  + 48 = 0 | b ^ 2\\
+        b ^ 4 + 48b ^ 2 - 32 ^ 2 + = 0\\
+        y = b ^ 2,\, y \geq 0\\
+        y ^ 2 + 48y - 32 ^ 2 = 0\\
+        D_y = 48 ^ 2 -4(-32 ^ 2)\\
+        D_y = 48 ^ 2 + 4\times32^2\\
+        D_y = 2^2\times3^2\times8^2 + 2^2\times4^2\times8 ^ 2\\
+        D_y = 2^28^2(3^2 + 4^2) = 2^28^25^2\\\
+        \sqrt{D_y} = 2\times5\times8 = 80\\
+        y_1 = \frac{-\stkout{48} + \stkout{80}}{2} = -24 + 40 = 16 > 0\\\
+        y_2 = \frac{-\stkout{48} + \stkout{80}}{2} = -24 - 40 = -64 \leq 0\\
+        \\
+        b ^ 2 = 16, b = \pm 4\\
+        a = \frac{-32}{\pm 4}, a = \mp 8\\
+        z = \mp 8 \pm 4\imath\\ 
+        x_1 = \frac{-(2 + 2\imath) + (-8 + 4\imath)}{2} = \frac{-2 - 2\imath - 8 + 4\imath}{2} = -1 -\imath -4 + 2\imath = -5 + \imath\\
+        x_2 = \frac{-(2 + 2\imath) - (-8 + 4\imath)}{2} = \frac{-2 - 2\imath + 8 - 4\imath}{2} = -1 -\imath +4 - 2\imath = 3 - 3\imath\\
+        x_3 = \frac{-(2 + 2\imath) + (8 - 4\imath)}{2} = \frac{-2 - 2\imath + 8 - 4\imath}{2} = -1 -\imath +4 - 2\imath =  3 - 3\imath\\
+        x_4 = \frac{-(2 + 2\imath) - (8 - 4\imath)}{2} = \frac{-2 - 2\imath - 8 + 4\imath}{2} = -1 -\imath -4 + 2\imath = -5 + \imath\\
+        x_1 = x_4, x_2 = x_3
+    \end{math}
+\end{document}
