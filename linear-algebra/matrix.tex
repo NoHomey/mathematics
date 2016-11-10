@@ -7,20 +7,89 @@
 \usepackage[normalem]{ulem}
 \newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
 
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
 \begin{document}
     \pagenumbering{gobble}
-    \begin{align*}
-        4x_1 + 3x_2 + 3x_3 - 2x_4 = \lambda\\
-        -x_1 - x_2 - x_3 + x_4 = 2\\
-        -19x_1 - 19x_2 - 20x_3 + (11 + \mu)x_4 = 6 - 2\lambda\\
-        4x_1 + 7x_2 + 8x_3 + x_4 = -2\\
+    \begin{math}
+        \begin{matrix}
+          4x_1 & + & 3x_2 & + & 3x_3 & - & 2x_4 & = & \lambda\\
+          -x_1 & - & x_2 & - & x_3 & + & x_4 & = & 2\\
+          -19x_1 & - & 19x_2 & - & 20x_3 & + & (11 + \mu)x_4 & = & 6 - 2\lambda\\
+          4x_1 & + & 7x_2 & + & 8x_3 & + & x_4 & = & -2
+        \end{matrix}\\
         \\
-        \sim
-        \begin{pmatrix}
-              4 & 3 &   3 & -2         &  \lambda\\
-            -1  &  -1 &  -1 &  1         &  2\\
-            -19 & -19 & -20 & (11 + \mu) &  6 - 2\lambda\\
-              4 &   7 & 8   & 1          & -2\\
+        \\
+        \begin{matrix}
+          3\\
+          ~\\
+          -20\\
+          8
+        \end{matrix}
+        \begin{pmatrix}[cccc|c]
+            4 & 3 & 3 & -2 &  \lambda\\
+            -1  &  -1 &  -1 & 1 & 2\\
+            -19 & -19 & -20 & 11 + \mu & 6 - 2\lambda\\
+            4 & 7 & 8 & 1 & -2
         \end{pmatrix}\\
-    \end{align*}
+        \\
+        \\
+        \to
+        \begin{matrix}
+          ~\\
+          -1\\
+          1\\
+          ~
+        \end{matrix}
+        \begin{pmatrix}[cccc|c]
+            1 & 0 & 0 & 1 & \lambda + 6\\
+            -1 & -1 & -1 & 1 & 2\\
+            1 & 1 & 0 & \mu - 9 & -34 - 2\lambda\\
+            -4 & -1 & 0 & 9 & 14
+        \end{pmatrix}\\
+        \\
+        \\
+        \to
+        \begin{matrix}
+          ~\\
+          -3\\
+          3\\
+          4
+        \end{matrix}
+        \begin{pmatrix}[cccc|c]
+            1 & 0 & 0 & 1 & \lambda + 6\\
+            3 & 0 & -1 & -8 & -12\\
+            -3 & 0 & 0 & \mu & -20 - 2\lambda\\
+            -4 & -1 & 0 & 9 & 14
+        \end{pmatrix}\\
+        \\
+        \\
+        \to
+        \begin{pmatrix}[cccc|c]
+            1 & 0 & 0 & 1 & \lambda + 6\\
+            0 & 0 & -1 & -11 & -3\lambda - 30\\\
+            0 & 0 & 0 & \mu + 3 & 2\lambda\\
+            0 & -1 & 0 & 13 & 4\lambda + 38
+        \end{pmatrix}
+        \begin{matrix}
+          ~\\
+          -1\\
+          ~\\
+          ~
+        \end{matrix}\\
+        \\
+        \\
+        \to
+        \begin{pmatrix}[cccc|c]
+            1 & 0 & 0 & 1 & \lambda + 6\\
+            0 & 0 & 1 & 11 & 3\lambda + 30\\\
+            0 & 0 & 0 & \mu + 3 & 2\lambda\\
+            0 & -1 & 0 & 13 & 4\lambda + 38
+        \end{pmatrix}
+    \end{math}
 \end{document}`
