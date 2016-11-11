@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+\usepackage[normalem]{ulem}
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{math}
+        \\
+        e_1 = x ^ 0\\
+        e_2 = x ^ 1\\
+        e_3 = x ^ 2\\
+        e_4 = x^ 3\\
+        a = \alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4\\
+        b = \beta_1e_1 + \beta_2e_2 + \beta_3e_3 + \beta_4e_4\\
+        c = \gamma_1e_1 + \gamma_2e_2 + \gamma_3e_3 + \gamma_4e_4\\
+        a, b, c \in \mathbb{V}\\
+        \lambda, \mu \in \mathbb{F}\\
+        \\
+        1.\quad(a + b) + c = a + (b + c)\\
+        \\
+        (a + b) = \alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4
+        + \beta_1e_1 + \beta_2e_2 + \beta_3e_3 + \beta_4e_4
+        = (\alpha_1 + \beta_1)e_1 + (\alpha_2 + \beta_2)e_2
+        + (\alpha_3 + \beta_3)e_3 + (\alpha_4 + \beta_4)e_4\\
+        \\
+        (a + b) + c = (\alpha_1 + \beta_1)e_1 + (\alpha_2 + \beta_2)e_2 + (\alpha_3 + \beta_3)e_3 + (\alpha_4 + \beta_4)e_4
+        + \gamma_1e_1 + \gamma_2e_2 + \gamma_3e_3 + \gamma_4e_4
+        = (\alpha_1 + \beta_1 + \gamma)e_1 + (\alpha_2 + \beta_2 + \gamma)e_2 + (\alpha_3 + \beta_3 + \gamma)e_3 + (\alpha_4 + \beta_4 + \gamma)e_4\\
+        \\
+        (b + c) = \beta_1e_1 + \beta_2e_2 + \beta_3e_3 + \beta_4e_4 + \gamma_1e_1 + \gamma_2e_2 + \gamma_3e_3 + \gamma_4e_4
+        = (\beta_1 + \gamma_1)e_1 + (\beta_2 + \gamma_2)e_2 + (\beta_3 + \gamma_3)e_3 + (\beta_4 + \gamma_4)e_4\\
+        \\
+        a + (b + c) = \alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4
+        + (\beta_1 + \gamma_1)e_1 + (\beta_2 + \gamma_2)e_2 + (\beta_3 + \gamma_3)e_3 + (\beta_4 + \gamma_4)e_4
+        = (\alpha_1 + \beta_1 + \gamma)e_1 + (\alpha_2 + \beta_2 + \gamma)e_2 + (\alpha_3 + \beta_3 + \gamma)e_3 + (\alpha_4 + \beta_4 + \gamma)e_4\\
+        \\
+        \implies (a + b) + c = a + (b + c) = a + b + c\\
+        \\
+        2.\quad a + b = b + a\\
+        3.\quad a + 0 = a\\
+        4.\quad \exists\,a': a + a' = 0\\
+        5.\quad 1 \times a = a\\
+        6.\quad \lambda(a + b) = \lambda \times a + \lambda \times b\\
+        7.\quad (\lambda + \mu)a = \lambda \times a + \mu \times a\\
+        8.\quad \lambda(\mu \times a) = \lambda\mu\times a)
+    \end{math}
+\end{document}
