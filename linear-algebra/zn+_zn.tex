@@ -9,20 +9,27 @@
 
 \begin{document}
     \pagenumbering{gobble}
-    \begin{align*}
+    \begin{math}
+        \\
         (x - \imath) ^ {36} + (x + \imath) ^ {36} = 0\\
-        (x + \imath) ^ {36} = -(x - \imath) ^ {36}\\
-        z_k ^ {36} = -1\\
-        |z_k| = \sqrt{1} = 1\\
-        z_k ^ {36} = \cos\pi + \imath\sin\pi\\
-        z_k = \sqrt[36]{\cos\pi + \imath\sin\pi}\\
-        z_k = \cos{\frac{\pi + 2k\pi}{36}} + \imath\sin{\frac{\pi + 2k\pi}{36}}\\
-        y = z_k,\, k = 0, 1, \dots, 35\\
-        \frac{x + \imath}{x - \imath} = y\\
-        x + \imath = y(x - \imath)\\
-        x + \imath = yx - y\imath\\
-        \imath + y\imath = yx - x\\
-        (1 + y)\imath = (y - 1)x\\
-        x = \frac{(y + 1)\imath}{(y - 1)}
-    \end{align*}
-\end{document}`\grid
+        (x - \imath) ^ {36} = -(x + \imath) ^ {36}\\
+        x \neq \imath\\
+        \left(\frac{x - \imath}{x + \imath}\right) ^ {36} = -1\\
+        A = \frac{x - \imath}{x + \imath}\\
+        A ^ {36} = -1\\
+        z = -1 = -1 + 0\imath\\
+        |z| = \sqrt{1} = 1\\
+        \cos\varphi = \frac{-1}{1} = -1, \sin\varphi = \frac{0}{1} = 0 \implies \varphi = \pi\\
+        z = \cos\pi + \imath\sin\pi\\
+        \sqrt[36]z = \cos{\frac{\pi + 2k\pi}{36}} + \imath\sin{\frac{\pi + 2k\pi}{36}} = z_k\\
+        k = 0, 1, \dots, 35\\
+        \frac{x - \imath}{x + \imath} = z_k\\
+        x - \imath = z_k(x + \imath)\\
+        x - \imath = z_kx + z_k\imath\\
+        \imath - z_k\imath = z_kx + x\\
+        (1 - z_k)\imath = (z_k + 1)x\\
+        z_k < \cos{\frac{\pi + 2\pi\stkout{36}}{\stkout{36}}} + \imath\sin{\frac{\pi + 2\pi\stkout{36}}{\stkout{36}}} = \cos\pi + \imath\sin\pi = -1\\
+        \implies z_k + 1 \neq 0\\
+        x = \frac{(z_k - 1)\imath}{(z_k + 1)}
+    \end{math}
+\end{document}
