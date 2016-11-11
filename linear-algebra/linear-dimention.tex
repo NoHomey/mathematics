@@ -7,6 +7,13 @@
 \usepackage[normalem]{ulem}
 \newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
 
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
 \begin{document}
     \pagenumbering{gobble}
     \begin{math}
@@ -18,35 +25,130 @@
         a = \alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4\\
         b = \beta_1e_1 + \beta_2e_2 + \beta_3e_3 + \beta_4e_4\\
         c = \gamma_1e_1 + \gamma_2e_2 + \gamma_3e_3 + \gamma_4e_4\\
-        a, b, c \in \mathbb{V}\\
-        \lambda, \mu \in \mathbb{F}\\
+        a' = \alpha_1'e_1 + \alpha_2'e_2 + \alpha_3'e_3 + \alpha_4'e_4\\
+        a, b, c, a' \in \mathbb{V}\\
+        \lambda, \mu, \alpha_1, \alpha_2, \alpha_3, \alpha_4, \beta_1, \beta_2, \beta_3, \beta_4, \gamma_1, \gamma_2, \gamma_3, \gamma_4, \alpha_1', \alpha_2', \alpha_3', \alpha_4' \in \mathbb{F}\\
         \\
         1.\quad(a + b) + c = a + (b + c)\\
         \\
-        (a + b) = \alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4
-        + \beta_1e_1 + \beta_2e_2 + \beta_3e_3 + \beta_4e_4
+        (a + b) = (\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4)
+        + (\beta_1e_1 + \beta_2e_2 + \beta_3e_3 + \beta_4e_4)
         = (\alpha_1 + \beta_1)e_1 + (\alpha_2 + \beta_2)e_2
         + (\alpha_3 + \beta_3)e_3 + (\alpha_4 + \beta_4)e_4\\
         \\
         (a + b) + c = (\alpha_1 + \beta_1)e_1 + (\alpha_2 + \beta_2)e_2 + (\alpha_3 + \beta_3)e_3 + (\alpha_4 + \beta_4)e_4
-        + \gamma_1e_1 + \gamma_2e_2 + \gamma_3e_3 + \gamma_4e_4
+        + (\gamma_1e_1 + \gamma_2e_2 + \gamma_3e_3 + \gamma_4e_4)
         = (\alpha_1 + \beta_1 + \gamma)e_1 + (\alpha_2 + \beta_2 + \gamma)e_2 + (\alpha_3 + \beta_3 + \gamma)e_3 + (\alpha_4 + \beta_4 + \gamma)e_4\\
         \\
-        (b + c) = \beta_1e_1 + \beta_2e_2 + \beta_3e_3 + \beta_4e_4 + \gamma_1e_1 + \gamma_2e_2 + \gamma_3e_3 + \gamma_4e_4
+        (b + c) = (\beta_1e_1 + \beta_2e_2 + \beta_3e_3 + \beta_4e_4) + (\gamma_1e_1 + \gamma_2e_2 + \gamma_3e_3 + \gamma_4e_4)
         = (\beta_1 + \gamma_1)e_1 + (\beta_2 + \gamma_2)e_2 + (\beta_3 + \gamma_3)e_3 + (\beta_4 + \gamma_4)e_4\\
         \\
-        a + (b + c) = \alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4
+        a + (b + c) = (\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4)
         + (\beta_1 + \gamma_1)e_1 + (\beta_2 + \gamma_2)e_2 + (\beta_3 + \gamma_3)e_3 + (\beta_4 + \gamma_4)e_4
         = (\alpha_1 + \beta_1 + \gamma)e_1 + (\alpha_2 + \beta_2 + \gamma)e_2 + (\alpha_3 + \beta_3 + \gamma)e_3 + (\alpha_4 + \beta_4 + \gamma)e_4\\
         \\
         \implies (a + b) + c = a + (b + c) = a + b + c\\
         \\
         2.\quad a + b = b + a\\
+        \\
+        (a + b) = (\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4)
+        + (\beta_1e_1 + \beta_2e_2 + \beta_3e_3 + \beta_4e_4)
+        = (\alpha_1 + \beta_1)e_1 + (\alpha_2 + \beta_2)e_2
+        + (\alpha_3 + \beta_3)e_3 + (\alpha_4 + \beta_4)e_4\\
+        \\
+        (b + a) = (\beta_1e_1 + \beta_2e_2 + \beta_3e_3 + \beta_4e_4)
+        + (\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4)
+        = (\alpha_1 + \beta_1)e_1 + (\alpha_2 + \beta_2)e_2
+        + (\alpha_3 + \beta_3)e_3 + (\alpha_4 + \beta_4)e_4\\
+        \\
+        \implies a + b = b + a\\
+        \\
         3.\quad a + 0 = a\\
+        \\
+        a + 0 = (\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4) + (0e_1 + 0e_2 + 0e_3 + 0e_4)
+        = (\alpha_1 + 0)e_1 + (\alpha_2 + 0)e_2
+        + (\alpha_3 + 0)e_3 + (\alpha_4 + 0)e_4
+        = \alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4\\
+        \\
+        \implies a + 0 = a\\
+        \\
         4.\quad \exists\,a': a + a' = 0\\
-        5.\quad 1 \times a = a\\
-        6.\quad \lambda(a + b) = \lambda \times a + \lambda \times b\\
-        7.\quad (\lambda + \mu)a = \lambda \times a + \mu \times a\\
-        8.\quad \lambda(\mu \times a) = \lambda\mu\times a)
+        \\
+        a + a' = 0\\
+        (\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4) + (\alpha_1'e_1 + \alpha_2'e_2 + \alpha_3'e_3 + \alpha_4'e_4) = (0e_1 + 0e_2 + 0e_3 = 0e_4)\\
+        (\alpha_1 + \alpha_1')e_1 + (\alpha_2 + \alpha_2')e_2 + (\alpha_3 + \alpha_3')e_3 + (\alpha_4 + \alpha_4')e_4 = (0e_1 + 0e_2 + 0e_3 = 0e_4)\\
+        \\
+        \equiv\quad
+        \begin{matrix}[|ccccc]
+            \alpha_1' & + & \alpha_1' & = & 0\\
+            \alpha_2 & + & \alpha_2' & = & 0\\
+            \alpha_3 & + & \alpha_3' & = & 0\\
+            \alpha_4 & + & \alpha_4' & = & 0\\
+        \end{matrix}
+        \quad\to\quad
+        \begin{matrix}[|ccc]
+            \alpha_1' & = & -\alpha_1\\
+            \alpha_2' & = & -\alpha_2\\
+            \alpha_3' & = & -\alpha_3\\
+            \alpha_4' & = & -\alpha_4\\
+        \end{matrix}\\
+        \\
+        \\
+        \implies a' = -\alpha_1e_1 + -\alpha_2e_2 + -\alpha_3e_3 + -\alpha_4e_4 = -(\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4) = -a\\
+        \implies \exists\,a': a + a' = 0\\
+        \\
+        5.\quad 1a = a\\
+        \\
+        1a = 1(\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4)
+        = (1\alpha_1)e_1 + (1\alpha_2)e_2 + (1\alpha_3)e_3 + (1\alpha_4)e_4
+        = \alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4\\
+        \\
+        \implies 1a = a\\
+        \\
+        6.\quad \lambda(a + b) = \lambda a + \lambda b\\
+        \\
+        \lambda(a + b) = \lambda[(\alpha_1 + \beta_1)e_1 + (\alpha_2 + \beta_2)e_2 + (\alpha_3 + \beta_3)e_3 + (\alpha_4 + \beta_4)e_4]
+        = \lambda(\alpha_1 + \beta_1)e_1 + \lambda(\alpha_2 + \beta_2)e_2 + \lambda(\alpha_3 + \beta_3)e_3 + \lambda(\alpha_4 + \beta_4)e_4
+        = (\lambda\alpha_1 + \lambda\beta_1)e_1 + (\lambda\alpha_2 + \lambda\beta_2)e_2 + (\lambda\alpha_3 + \lambda\beta_3)e_3 + (\lambda\alpha_4 + \lambda\beta_4)e_4\\
+        \\
+        \lambda a = \lambda(\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4)
+        = \lambda\alpha_1e_1 + \lambda\alpha_2e_2 + \lambda\alpha_3e_3 + \lambda\alpha_4e_4\\
+        \\
+        \lambda b = \lambda(\beta_1e_1 + \beta_2e_2 + \beta_3e_3 + \beta_4e_4)
+        = \lambda\beta_1e_1 + \lambda\beta_2e_2 + \lambda\beta_3e_3 + \lambda\beta_4e_4\\
+        \\
+        \lambda a + \lambda b = (\lambda\alpha_1e_1 + \lambda\alpha_2e_2 + \lambda\alpha_3e_3 + \lambda\alpha_4e_4) + (\lambda\beta_1e_1 + \lambda\beta_2e_2 + \lambda\beta_3e_3 + \lambda\beta_4e_4)
+        = (\lambda\alpha_1 + \lambda\beta_1)e_1 + (\lambda\alpha_2 + \lambda\beta_2)e_2 + (\lambda\alpha_3 + \lambda\beta_3)e_3 + (\lambda\alpha_4 + \lambda\beta_4)e_4\\
+        \\
+        \implies \lambda(a + b) = \lambda a + \lambda b\\
+        \\
+        7.\quad (\lambda + \mu)a = \lambda a + \mu a\\
+        \\
+        (\lambda + \mu)a = (\lambda + \mu)(\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4)
+        = [(\lambda + \mu)\alpha_1]e_1 + [(\lambda + \mu)\alpha_2]e_2 + [(\lambda + \mu)\alpha_3]e_3 + [(\lambda + \mu)\alpha_4]e_4
+        = (\lambda\alpha_1 + \mu\alpha_1)e_1 + (\lambda\alpha_2 + \mu\alpha_2)e_2 + (\lambda\alpha_3 + \mu\alpha_3)e_3 + (\lambda\alpha_4 + \mu\alpha_4)e_4\\
+        \\
+        \lambda a = \lambda(\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4)
+        = \lambda\alpha_1e_1 + \lambda\alpha_2e_2 + \lambda\alpha_3e_3 + \lambda\alpha_4e_4\\
+        \\
+        \mu a = \mu(\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4)
+        = \mu\alpha_1e_1 + \mu\alpha_2e_2 + \mu\alpha_3e_3 + \mu\alpha_4e_4\\
+        \\
+        \lambda a + \mu a = (\lambda\alpha_1e_1 + \lambda\alpha_2e_2 + \lambda\alpha_3e_3 + \lambda\alpha_4e_4) + (\mu\alpha_1e_1 + \mu\alpha_2e_2 + \mu\alpha_3e_3 + \mu\alpha_4e_4)
+        = (\lambda\alpha_1 + \mu\alpha_1)e_1 + (\lambda\alpha_2 + \mu\alpha_2)e_2 + (\lambda\alpha_3 + \mu\alpha_3)e_3 + (\lambda\alpha_4 + \mu\alpha_4)e_4\\
+        \\
+        \implies (\lambda + \mu)a = \lambda a + \mu a\\
+        \\
+        8.\quad \lambda(\mu a) = \lambda \mu a\\
+        \\
+        \mu a = \mu(\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4)
+        = \mu\alpha_1e_1 + \mu\alpha_2e_2 + \mu\alpha_3e_3 + \mu\alpha_4e_4\\
+        \\
+        \lambda(\mu a) = \lambda(\mu\alpha_1e_1 + \mu\alpha_2e_2 + \mu\alpha_3e_3 + \mu\alpha_4e_4)
+        = \lambda(\mu\alpha_1e_1 + \mu\alpha_2e_2 + \mu\alpha_3e_3 + \mu\alpha_4e_4)
+        = \lambda\mu\alpha_1e_1 + \lambda\mu\alpha_2e_2 + \lambda\mu\alpha_3e_3 + \lambda\mu\alpha_4e_4)
+        = \lambda\mu(\alpha_1e_1 + \alpha_2e_2 + \alpha_3e_3 + \alpha_4e_4) = \lambda\mu a\\
+        \\
+        \implies \lambda(\mu a) = \lambda \mu a
     \end{math}
 \end{document}
