@@ -30,15 +30,29 @@
         \\
         \lim_{n \to \infty} \frac{3n^4 + 4^nn^2 + (-3)^n}{2n^3 + 5^n}\\
         \\
-        \lim_{n \to \infty} \frac{\stkout{n^4}\left(3 + \frac{4^n}{n^2} + \frac{(-3)^n}{n^4}\right)}{\stkout{n^3}\left(2 + \frac{5^n}{n^3}\right)}\\
+        \lim_{n \to \infty} \frac{3n^4}{2n^3 + 5^n}\\
         \\
-        \lim_{n \to \infty} \frac{n\left(3 + \frac{4^n}{n^2} + \frac{(-3)^n}{n^4}\right)}{2 + \frac{5^n}{n^3}}\\
+        \lim_{n \to \infty} \frac{n^{\stkout{4}}3}{n^{\stkout{3}}(2 + \frac{5^n}{n^3})}\\
         \\
-        n \to \infty\, a^n \prec n^b, a, b \in \mathbb{R} \implies \frac{4^n}{n^2} \to 0, \frac{(-3)^n}{n^4} \to 0, \frac{5^n}{n^3} \to 0\\
+        \lim_{n \to \infty} \frac{3n}{2 + \frac{5^n}{n^3}}\\
         \\
-        \implies \lim_{n \to \infty} \frac{n\left(3 + \frac{4^n}{n^2} + \frac{(-3)^n}{n^4}\right)}{2 + \frac{5^n}{n^3}} \to \frac{n3}{2} = n \to \infty\\
+        \ n \to \infty \quad n^3 \prec 5^n \implies \frac{5^n}{n^3} \to \infty \quad n \prec \frac{5^n}{n^3} \implies \lim_{n \to \infty} \frac{3n^4}{2n^3 + 5^n} = 0\\
         \\
-        \lim_{n \to \infty} \frac{3n^4 + 4^nn^2 + (-3)^n}{2n^3 + 5^n} = \infty\\
+        \lim_{n \to \infty} \frac{4^nn^2}{2n^3 + 5^n}\\
+        \\
+        \lim_{n \to \infty} \frac{n^{\stkout{2}}\frac{4^n}{n^2}}{n^{\stkout{3}}(2 + \frac{5^n}{n^3})}\\
+        \\
+        \lim_{n \to \infty} \frac{\frac{4^n}{n^2}}{2n + \frac{5^n}{n^2}}\\
+        \\
+        \ n \to \infty \quad 4^n \prec 5^n\,,\, n^0 \prec 2n \implies \lim_{n \to \infty} \frac{4^nn^2}{2n^3 + 5^n} = 0\\
+        \\
+        \lim_{n \to \infty} \frac{(-3)^n}{2n^3 + 5^n}\\
+        \\
+        n \to \infty \quad (-3)^n \to -\infty\,,\, 5^n \to \infty\\
+        \\
+        (-3)^n \prec 5^n\,,\, n^0 \prec 2n^3 \implies \lim_{n \to \infty} \frac{(-3)^n}{2n^3 + 5^n} = 0\\
+        \\
+        \lim_{n \to \infty} \frac{3n^4 + 4^nn^2 + (-3)^n}{2n^3 + 5^n} = \lim_{n \to \infty} \frac{3n^4}{2n^3 + 5^n} + \lim_{n \to \infty} \frac{4^nn^2}{2n^3 + 5^n}\\ + \lim_{n \to \infty} \frac{(-3)^n}{2n^3 + 5^n} = 0 + 0 + 0 = 0\\
         \\
         \\
         \text{в)} \lim_{n \to \infty} \frac{n^2 + 3n + 3}{n^2 - 3n -4}^{3n + 3}\\
@@ -95,7 +109,7 @@
         \implies \lim_{n \to \infty} \frac{n^2 + 3n + 3}{n^2 - 3n -4}^{\frac{1}{3n + 3}} = e^{0} = 1\\
         \\
         \\
-        \text{Д)} \lim_{n \to \infty} \frac{n}{\sqrt{n^4 + 3n^2 + 4} - \sqrt{n^4 - n^3 + 1}}\\
+        \text{д)} \lim_{n \to \infty} \frac{n}{\sqrt{n^4 + 3n^2 + 4} - \sqrt{n^4 - n^3 + 1}}\\
         \\
         \lim_{n \to \infty} \frac{n}{\sqrt{n^4 + 3n^2 + 4} - \sqrt{n^4 - n^3 + 1}}\\
         \\

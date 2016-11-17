@@ -5,7 +5,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[bulgarian]{babel}
 \usepackage[normalem]{ulem}
-\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
 
 \begin{document}
     \pagenumbering{gobble}
@@ -15,7 +14,7 @@
         \\
         \overline{A} = \exists\, C \geq 0 \quad \forall n\,;\, a_n \geq C\\
         \\
-        a_n\downarrow \implies \exists\, \upsilon\,;\, a_\upsilon \geq C; a_{\upsilon + 1} < C\\
+        a_n\downarrow \implies a_{n + 1} < a_n \implies \exists\, \upsilon\,;\, a_\upsilon \geq C; a_{\upsilon + 1} < C\\
         \\
         \implies \forall\, n > \upsilon \quad a_n < C \implies conflict\\
         \\
