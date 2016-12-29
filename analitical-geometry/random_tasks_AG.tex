@@ -15,28 +15,51 @@
     \(\vectr{CA} = \vectr{a}, \; \vectr{CB} = \vectr{b}, \; |\vectr{b}| = 2, \; (\vectr{a}, \vectr{b})_e = \frac{2\pi}{3}\\
     |AB| = ?, \; m_B \perp l_C\\
     \\\vectr{AB} = \vectr{b} - \vectr{a}\\
-    \vectr{BM} = \frac{1}{2}(\vectr{BA} + \vectr{BC}) = \frac{1}{2}(-\vectr{AB} + (-\vectr{CB})) = \\
-    = \frac{1}{2}(-(\vectr{b} - \vectr{a}) + (-\vectr{b})) = \frac{1}{2}(\vectr{a}  -2\vectr{b})\\
-    \vectr{CL} = \vectr{CA} + \vectr{AL}\\
+    \\\vectr{BM} = \frac{1}{2}(\vectr{BA} + \vectr{BC}) = \frac{1}{2}(-\vectr{AB} + (-\vectr{CB})) = \\
+    \\= \frac{1}{2}(-(\vectr{b} - \vectr{a}) + (-\vectr{b})) = \frac{1}{2}(\vectr{a}  -2\vectr{b})\\
+    \\\vectr{CL} = \vectr{CA} + \vectr{AL}\\
     \\CL \equiv l_C, \; L \in AB \implies \frac{|AL|}{|LB|} = \frac{|CA|}{|CB|} = \frac{|\vectr{a}|}{|\vectr{b}|}\\
-    \implies |AL| = \frac{|\vectr{a}|}{|\vectr{a}| + |\vectr{b}|}|AB|\\
-    \implies \vectr{AL} = \frac{|\vectr{a}|}{|\vectr{a}| + |\vectr{b}|}(\vectr{b} - \vectr{a}) = \frac{|\vectr{a}|\vectr{b} - |\vectr{a}|\vectr{a}}{|\vectr{a}| + |\vectr{b}|}\\
-    \vectr{CL} = \vectr{a} + \frac{|\vectr{a}|\vectr{b} - |\vectr{a}|\vectr{a}}{|\vectr{a}| + |\vectr{b}|}
-    = \frac{\stkout{|\vectr{a}|\vectr{a}} + |\vectr{b}|\vectr{a} + |\vectr{a}|\vectr{b} - \stkout{|\vectr{a}|\vectr{a}}}{|\vectr{a}| + |\vectr{b}|}
-    = \frac{|\vectr{b}|\vectr{a} + |\vectr{a}|\vectr{b}}{|\vectr{a}| + |\vectr{b}|}\\
-    |\vectr{b}| = 2 \implies \vectr{CL} = \frac{2\vectr{a} + |\vectr{a}|\vectr{b}}{|\vectr{a}| + 2}\\
+    \\\implies |AL| = \frac{|\vectr{a}|}{|\vectr{a}| + |\vectr{b}|}|AB|\\
+    \\\implies \vectr{AL} = \frac{|\vectr{a}|}{|\vectr{a}| + |\vectr{b}|}(\vectr{b} - \vectr{a}) = \frac{|\vectr{a}|\vectr{b} - |\vectr{a}|\vectr{a}}{|\vectr{a}| + |\vectr{b}|}\\
+    \\\vectr{CL} = \vectr{a} + \frac{|\vectr{a}|\vectr{b} - |\vectr{a}|\vectr{a}}{|\vectr{a}| + |\vectr{b}|}
+    \\= \frac{\stkout{|\vectr{a}|\vectr{a}} + |\vectr{b}|\vectr{a} + |\vectr{a}|\vectr{b} - \stkout{|\vectr{a}|\vectr{a}}}{|\vectr{a}| + |\vectr{b}|}
+    \\= \frac{|\vectr{b}|\vectr{a} + |\vectr{a}|\vectr{b}}{|\vectr{a}| + |\vectr{b}|}\\
+    \\|\vectr{b}| = 2 \implies \vectr{CL} = \frac{2\vectr{a} + |\vectr{a}|\vectr{b}}{|\vectr{a}| + 2}\\
     \\m_B \perp l_C \implies \vectr{BM}\vectr{CL} = 0\\
-    \frac{1}{2}(\vectr{a}  -2\vectr{b})\frac{2\vectr{a} + |\vectr{a}|\vectr{b}}{|\vectr{a}| + 2} = 0 \; | \quad 2(|\vectr{a}| + 2)\\
-    (\vectr{a}  -2\vectr{b})(2\vectr{a} + |\vectr{a}|\vectr{b}) = 0\\
-    2|\vectr{a}|^2 + \vectr{a}\vectr{b}|\vectr{a}| -4\vectr{a}\vectr{b} - 2|\vectr{a}||\vectr{b}|^2\\
-    \vectr{a}\vectr{b} = |\vectr{a}||\vectr{b}|\cos(\vectr{a}, \vectr{b})_e = |\vectr{a}|\stkout{2}\frac{-1}{\stkout{2}} = - |\vectr{a}|\\
-    2|\vectr{a}|^2 - |\vectr{a}|^2 + 4|\vectr{a}| -8|\vectr{a}| = 0\\
-    |\vectr{a}|^2 - 4|\vectr{a}| = 0\\
-    |\vectr{a}|(|\vectr{a}| - 4) = 0\\
-    |\vectr{a}| = 0 (|\vectr{a}| > 0) \quad |\vectr{a}| - 4 = 0\\
-    \implies |\vectr{a}| = 4\\
+    \\\frac{1}{2}(\vectr{a}  -2\vectr{b})\frac{2\vectr{a} + |\vectr{a}|\vectr{b}}{|\vectr{a}| + 2} = 0 \; | \quad 2(|\vectr{a}| + 2)\\
+    \\(\vectr{a}  -2\vectr{b})(2\vectr{a} + |\vectr{a}|\vectr{b}) = 0\\
+    \\2|\vectr{a}|^2 + \vectr{a}\vectr{b}|\vectr{a}| -4\vectr{a}\vectr{b} - 2|\vectr{a}||\vectr{b}|^2\\
+    \\\vectr{a}\vectr{b} = |\vectr{a}||\vectr{b}|\cos(\vectr{a}, \vectr{b})_e = |\vectr{a}|\stkout{2}\frac{-1}{\stkout{2}} = - |\vectr{a}|\\
+    \\2|\vectr{a}|^2 - |\vectr{a}|^2 + 4|\vectr{a}| -8|\vectr{a}| = 0\\
+    \\|\vectr{a}|^2 - 4|\vectr{a}| = 0\\
+    \\|\vectr{a}|(|\vectr{a}| - 4) = 0\\
+    \\|\vectr{a}| = 0 (|\vectr{a}| > 0) \quad |\vectr{a}| - 4 = 0\\
+    \\\implies |\vectr{a}| = 4\\
     \\|\vectr{AB}|^2 = \vectr{AB}^2 = (\vectr{b} - \vectr{a})^2 = \vectr{b}^2 -2\vectr{a}\vectr{b} + \vectr{a}^2\\
-    = 4 + 8 + 16 = 28\\
-    \implies |\vectr{AB}| = \sqrt{28} = 2\sqrt{7} = |AB|
-        \)
+    \\= 4 + 8 + 16 = 28\\
+    \\\implies |\vectr{AB}| = \sqrt{28} = 2\sqrt{7} = |AB|\)
+    \section{136}
+    \(OCS \quad K = O\vectr{e_1}\vectr{e_2}, \; A_1(x_1, y_1), \; A_2(x_2, y_2), \; A_3(x_3, y_3), \; A_1 \nparallel A_2 \nparallel A_3 \nparallel A_1\\
+    \\S\bigtriangleup A_1A_2A_3 =? \; \frac{1}{2}(x_1 - x_2)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)\\
+    \\K' = O\vectr{e_1}\vectr{e_2}\vectr{e_3}; \; e_3 = e_1 \times e_2 \implies A_1(x_1, y_1, 0), \; A_2(x_2, y_2, 0), \; A_3(x_3, y_3, 0)\\
+    \\S\bigtriangleup A_1A_2A_3 = \frac{1}{2}|\vectr{A_1A_2} \times \vectr{A_1A_3}|\\
+    \\\vectr{A_1A_2}(x_2 - x_1, y_2 - y_1, 0), \; \vectr{A_1A_3}(x_3 - x_1, y_3 - y_1, 0)\\
+    \\\vectr{A_1A_2} \times \vectr{A_1A_3}\left(\begin{vmatrix}
+        y_2 - y_1 & 0\\
+        y_3 - y_1 & 0
+    \end{vmatrix}, \begin{vmatrix}
+        0 & x_2 - x_1\\
+        0 & x_3 - x_1
+    \end{vmatrix}, \begin{vmatrix}
+        x_2 - x_1 & y_2 - y_1\\
+        x_3 - x_1 & y_3 - y_1
+    \end{vmatrix}\right)\\
+    \\\vectr{A_1A_2} \times \vectr{A_1A_3}\left(0, 0, \begin{vmatrix}
+        x_2 - x_1 & y_2 - y_1\\
+        x_3 - x_1 & y_3 - y_1
+    \end{vmatrix}\right)\\
+    \\|\vectr{A_1A_2} \times \vectr{A_1A_3}| = \sqrt{0 + 0 + [(x_2 - x_1)(y_3 - y_1) - (y_2 - y_1)(x_3 - x_1)]^2} =\\
+    \\ = (x_2 - x_1)(y_3 - y_1) - (y_2 - y_1)(x_3 - x_1)\\
+    \\\implies S\bigtriangleup A_1A_2A_3 = \frac{1}{2}(x_1 - x_2)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)
+    \)
 \end{document}
