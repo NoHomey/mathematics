@@ -60,6 +60,44 @@
     \end{vmatrix}\right)\\
     \\|\vectr{A_1A_2} \times \vectr{A_1A_3}| = \sqrt{0 + 0 + [(x_2 - x_1)(y_3 - y_1) - (y_2 - y_1)(x_3 - x_1)]^2} =\\
     \\ = (x_2 - x_1)(y_3 - y_1) - (y_2 - y_1)(x_3 - x_1)\\
-    \\\implies S\bigtriangleup A_1A_2A_3 = \frac{1}{2}(x_1 - x_2)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)
-    \)
+    \\\implies S\bigtriangleup A_1A_2A_3 = \frac{1}{2}(x_1 - x_2)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)\\
+    \\\implies S\bigtriangleup A_1A_2A_3 = \frac{1}{2} \begin{vmatrix}
+        x_2 - x_1 & y_2 - y_1\\
+        x_3 - x_1 & y_3 - y_1
+    \end{vmatrix}\)
+    \section{137 (Th Shal)}
+    \(A, B, C, D \in \lambda \in S_2, \; S\bigtriangleup ABC =? \; S\bigtriangleup DAB + S\bigtriangleup DBC + S\bigtriangleup DCA\\
+    \\A(a_1, a_2), \; B(b_1, b_2), \; C(c_1, c_2), \; D(d_1, d_2)\\
+    \\\lambda' \in S_3; \; A(a_1, a_2, 0), \; B(b_1, b_2, 0), \; C(c_1, c_2, 0), \; D(d_1, d_2, 0)\\
+    \\S\bigtriangleup ABC = \frac{1}{2}|\vectr{AB} \times \vectr{AC}|\\
+    \\\vectr{AB}(b_1 - a_1, b_2 - a_2, 0), \; \vectr{AC}(c_1 - a_1, c_2 - a_2, 0)\\
+    \\S\bigtriangleup ABC = \frac{1}{2}\begin{vmatrix}
+        b_1 - a_1 & b_2 - a_2\\
+        c_1 - a_1 & c_2 - a_2
+    \end{vmatrix} = \frac{1}{2}[(b_1 - a_1)(c_2 - a_2) - (b_2 - a_2)(c_1 - a_1)] = \\
+    \\ = \frac{1}{2}(b_1c_2 -b_1a_2 - a_1c_2 + \stkout{a_1a_2} - b_2c_1 + b_2a_1 + a_2c_1 - \stkout{a_1a_2}) = \\
+    \\ = \frac{1}{2}(b_1c_2 -b_1a_2 - a_1c_2 - b_2c_1 + b_2a_1 + a_2c_1)\\
+    \\\vectr{DA}(a_1 - d_1, a_2 - d_2, 0), \; \vectr{DB}(d_1 - b_1, d_2 - b_2, 0)\\
+    \\S\bigtriangleup DAB = \frac{1}{2}\begin{vmatrix}
+        a_1 - d_1 & a_2 - d_2\\
+        b_1 - d_1 & b_2 - d_2
+    \end{vmatrix}\\
+    \\\vectr{DC}(c_1 - d_1, c_2 - d_2, 0), \quad S\bigtriangleup DBC = \frac{1}{2}\begin{vmatrix}
+        b_1 - d_1 & b_2 - d_2\\
+        c_1 - d_1 & c_2 - d_2
+    \end{vmatrix}\\
+    \\S\bigtriangleup DCA = \frac{1}{2}\begin{vmatrix}
+        c_1 - d_1 & c_2 - d_2\\
+        a_1 - d_1 & a_2 - d_2
+    \end{vmatrix}\\
+    \\S\bigtriangleup DAB + S\bigtriangleup DCA = \\
+    \\ = \frac{1}{2}[(a_1 - d_1)(b_2 - d_2) - (a_2 - d_2)(b_1 - d_1) + (c_1 - d_1)(a_2 - d_2) - (c_2 - d_2)(a_1 - d_1)] =\\
+    \\ = \frac{1}{2}[(a_1 - d_1)(b_2 - \stkout{d_2} - c_2 + \stkout{d_2}) + (a_2 - d_2)(c_1 - \stkout{d_1} - b_1 + \stkout{d_1})] = \\
+    \\ = \frac{1}{2}[(a_1 - d_1)(b_2 - c_2) + (a_2 - d_2)(c_1 - b_1)]\\
+    \\S\bigtriangleup DAB + S\bigtriangleup DCA + S\bigtriangleup DBC = \\
+    \\ = \frac{1}{2}[(a_1 - d_1)(b_2 - c_2) + (a_2 - d_2)(c_1 - b_1) + (b_1 - d_1)(c_2 - d_2) - (b_2 - d_2)(c_1 - d_1)] = \\
+    \\ = \frac{1}{2}(a_1b_2 - a_1c_2 - \stkout{d_1b_2} + \stkout{d_1c_2} + a_2c_1 - a_2b_1 - \stkout{d_2c_1} + \stkout{d_2b_1} + b_1c_2 - \stkout{b_1d_2} - \stkout{d_1c_2} + \stkout{d_1d_2} - b_2c_1 + \stkout{b_2d_1} + \stkout{d_2c_1} - \stkout{d_2d_1}) = \\
+    \\ = \frac{1}{2}(a_1b_2 - a_1c_2 + a_2c_1 - a_2b_1 + b_1c_2 - b_2c_1) = \\
+    \\ = \frac{1}{2}(b_1c_2 -b_1a_2 - a_1c_2 - b_2c_1 + b_2a_1 + a_2c_1)\\
+    \\\implies S\bigtriangleup ABC = S\bigtriangleup DAB + S\bigtriangleup DBC + S\bigtriangleup DCA\)
 \end{document}
