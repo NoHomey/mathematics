@@ -40,7 +40,7 @@
     \\\implies |\vectr{AB}| = \sqrt{28} = 2\sqrt{7} = |AB|\)
     \section{136}
     \(OCS \quad K = O\vectr{e_1}\vectr{e_2}, \; A_1(x_1, y_1), \; A_2(x_2, y_2), \; A_3(x_3, y_3), \; A_1 \nparallel A_2 \nparallel A_3 \nparallel A_1\\
-    \\S\bigtriangleup A_1A_2A_3 =? \; \frac{1}{2}(x_1 - x_2)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)\\
+    \\S\bigtriangleup A_1A_2A_3 =? \; \frac{1}{2}|(x_1 - x_2)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)|\\
     \\K' = O\vectr{e_1}\vectr{e_2}\vectr{e_3}; \; e_3 = e_1 \times e_2 \implies A_1(x_1, y_1, 0), \; A_2(x_2, y_2, 0), \; A_3(x_3, y_3, 0)\\
     \\S\bigtriangleup A_1A_2A_3 = \frac{1}{2}|\vectr{A_1A_2} \times \vectr{A_1A_3}|\\
     \\\vectr{A_1A_2}(x_2 - x_1, y_2 - y_1, 0), \; \vectr{A_1A_3}(x_3 - x_1, y_3 - y_1, 0)\\
@@ -59,16 +59,20 @@
         x_3 - x_1 & y_3 - y_1
     \end{vmatrix}\right)\\
     \\|\vectr{A_1A_2} \times \vectr{A_1A_3}| = \sqrt{0 + 0 + [(x_2 - x_1)(y_3 - y_1) - (y_2 - y_1)(x_3 - x_1)]^2} =\\
-    \\ = (x_2 - x_1)(y_3 - y_1) - (y_2 - y_1)(x_3 - x_1)\\
-    \\\implies S\bigtriangleup A_1A_2A_3 = \frac{1}{2}(x_1 - x_2)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)\\
-    \\\implies S\bigtriangleup A_1A_2A_3 = \frac{1}{2} \begin{vmatrix}
+    \\ = |(x_2 - x_1)(y_3 - y_1) - (y_2 - y_1)(x_3 - x_1)|\\
+    \\\implies S\bigtriangleup A_1A_2A_3 = \frac{1}{2}|(x_1 - x_2)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)|\\
+    \\\implies S\bigtriangleup A_1A_2A_3 = \frac{1}{2} \left|\begin{vmatrix}
         x_2 - x_1 & y_2 - y_1\\
         x_3 - x_1 & y_3 - y_1
-    \end{vmatrix}\)
+    \end{vmatrix}\right| = \frac{1}{2} \varepsilon \begin{vmatrix}
+        x_2 - x_1 & y_2 - y_1\\
+        x_3 - x_1 & y_3 - y_1
+    \end{vmatrix}; \; \varepsilon = \pm 1\)
     \section{137 (Th Shal)}
     \(A, B, C, D \in \lambda \in S_2, \; S\bigtriangleup ABC =? \; S\bigtriangleup DAB + S\bigtriangleup DBC + S\bigtriangleup DCA\\
     \\A(a_1, a_2), \; B(b_1, b_2), \; C(c_1, c_2), \; D(d_1, d_2)\\
-    \\\lambda' \in S_3; \; A(a_1, a_2, 0), \; B(b_1, b_2, 0), \; C(c_1, c_2, 0), \; D(d_1, d_2, 0)\\
+    \\\lambda' \in S_3; \; A(a_1, a_2, 0), \; B(b_1, b_2, 0), \; C(c_1, c_2, 0), \; D(d_1, d_2, 0) \in \lambda' \implies\\
+    \\signS\bigtriangleup ABC =  signS\bigtriangleup DAB = signS\bigtriangleup DBC = sign S\bigtriangleup DCA = \varepsilon; \; \varepsilon = \pm 1\\
     \\S\bigtriangleup ABC = \frac{1}{2}|\vectr{AB} \times \vectr{AC}|\\
     \\\vectr{AB}(b_1 - a_1, b_2 - a_2, 0), \; \vectr{AC}(c_1 - a_1, c_2 - a_2, 0)\\
     \\S\bigtriangleup ABC = \frac{1}{2}\begin{vmatrix}
