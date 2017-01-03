@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[bulgarian]{babel}
 \usepackage[normalem]{ulem}
+\usepackage{tikz}
 
 \newcommand{\vectr}{\overrightarrow}
 \newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
@@ -104,4 +105,60 @@
     \\ = \frac{1}{2}(a_1b_2 - a_1c_2 + a_2c_1 - a_2b_1 + b_1c_2 - b_2c_1) = \\
     \\ = \frac{1}{2}(b_1c_2 -b_1a_2 - a_1c_2 - b_2c_1 + b_2a_1 + a_2c_1)\\
     \\\implies S\bigtriangleup ABC = S\bigtriangleup DAB + S\bigtriangleup DBC + S\bigtriangleup DCA\)
+    \section{206}
+    \(b_A : x - 2y + 3 = 0, \; m_A : 2x + 7 - 4 = 0, \; S\bigtriangleup ABC = ?, \; B(3, -4)\\
+    \\ b_A \perp m_A \implies m_A \equiv b_A \sphericalangle(BAC)_e \implies AB = AC \implies B = OImC\\
+    \begin{tikzpicture}
+    \draw (1,2) node[anchor=south]{$A(1, 2)$}
+        -- (23/5, -16/5) node[anchor=west]{$C(\frac{23}{5}, -\frac{16}{5})$}
+        -- (3,-4) node[anchor=north]{$B(3, -4)$}
+        -- cycle;
+    \draw (1, 2) -- (38/10, -36/10) node[anchor=south]{$m_A$};
+    \draw (1, 2) -- (3, 3.25) node[anchor=south]{$b_A$};
+    \end{tikzpicture}\\
+    \\ m_A \cap b_A = A(x_A, y_A)\\
+    \\ \begin{array}{lcl}
+        x_A - 2y_A + 3 & = & 0\\
+        2x_A + y_A - 4 & = & 0 \; | 2
+    \end{array} \\
+    \\\\ \begin{array}{lcl}
+        x_A - 2y_A + 3 & = & 0 \\
+        + & ~ & ~ \\
+        4x_A + 2y_A - 8 & = & 0 \;
+    \end{array} \\
+    \\\\ 5x_A = 5, \; x_A = 1\\
+    \\ 2 + y_A - 4 = 0, \; y_A = 2\\
+    \\\implies (x_A, y_A) = (1, 2)\\
+    \\ m_A \equiv h_A \perp BC \implies BC : x - 2y + c = 0\\
+    \\ B(3, -4) \; z \; BC \implies 3 + 8 + c = 0, \; c = -11\\
+    \\\implies BC : x - 2y - 11 = 0\\
+    \\ BC \cup m_A = M(x_M, y_M)\\
+    \\ \begin{array}{lcl}
+        x_M - 2y_M - 11 & = & 0\\
+        2x_M + y_M - 4 & = & 0 \; | 2
+    \end{array} \\
+    \\\\ \begin{array}{lcl}
+        x_M - 2y_M - 11 & = & 0 \\
+        + & ~ & ~ \\
+        4x_M + 2y_M - 8 & = & 0 \;
+    \end{array} \\
+    \\\\ 5x_M - 19 = 0, \; x_M = \frac{19}{5}\\
+    \\ \frac{19}{5} - 2y_M - 11 = 0 \; | 5\\
+    \\ 19 - 10y_M - 55 = 0\\
+    \\ -10y_M - 36 = 0\\
+    \\ y_M = -\frac{\stkout{36}}{\stkout{10}} = - \frac{18}{5}\\
+    \\\implies (x_M, y_M) = (\frac{19}{5}, - \frac{18}{5})\\
+    \\ (x_M, y_M) = (\frac{x_B + x_C}{2}, \frac{y_B + y_C}{2})\\
+    \\\frac{19}{5} = \frac{3 + x_C}{2} \quad -\frac{18}{5} = \frac{-4 + y_C}{2}\\
+    \\ 38 = 15 + 5x_C \quad -36 = -20 + 5y_C\\
+    \\ x_C = \frac{23}{5} \quad y_C = -\frac{16}{5}\\
+    \\\implies (x_C, y_C) = (\frac{23}{5}, -\frac{16}{5})\\
+    \\\\\\ C(\frac{23}{5}, -\frac{16}{5}), \; A(1, 2)\\
+    \\ S\bigtriangleup ABC = |\vectr{AB} \times \vectr{AC}|\\
+    \\ \vectr{AB}(2, - 6), \; \vectr{AC}(\frac{18}{5},-\frac{26}{5})\\
+    \\ S\bigtriangleup ABC = \varepsilon\left|\begin{vmatrix}
+        2 & -6\\
+        \frac{18}{5} & -\frac{26}{5}\\
+    \end{vmatrix}\right|, \varepsilon = 1, \; \vectr{AB}, \vectr{AC} \in S^-\\
+    \\ S\bigtriangleup ABC = -\frac{52}{5} + \frac{108}{5} = \frac{56}{5}\)
 \end{document}
