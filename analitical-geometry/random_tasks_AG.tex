@@ -161,4 +161,55 @@
         \frac{18}{5} & -\frac{26}{5}\\
     \end{vmatrix}\right|, \varepsilon = 1, \; \vectr{AB}, \vectr{AC} \in S^-\\
     \\ S\bigtriangleup ABC = -\frac{52}{5} + \frac{108}{5} = \frac{56}{5}\)
+    \section{218}
+    \(P(2, 4), \; Q(1, 1), \; l \; z \; P, \; l' \; z \; Q; \quad l, \; l' ?\\
+    \\\begin{tikzpicture}
+    \draw (2, 4) node[anchor=east]{$P(2, 4)$} (1, -1) node[anchor=east]{$Q'(1, -1)$};
+    \draw (1, 1) node[anchor=east]{$Q(1, 1)$} (2, -4) node[anchor=west]{$P'(2, -4)$};
+    \draw (1, 0) node[anchor=east]{$Q_0(1, 0)$} (2, 0) node[anchor=west]{$P_0(2, 0)$};
+    \draw (4/5, -2) -- (11/5, 5) node[anchor=east]{$l$};
+    \draw (4/5, 2) node[anchor=east]{$l'$} -- (11/5, -5);
+    \draw (-1, 0) -- (4, 0) node[anchor=south]{$O_x$};
+    \draw (1, 1) -- (1, -1);
+    \draw (2, 4) -- (2, -4);
+    \end{tikzpicture}\\
+    \\ O_x: x = 0\\
+    \\ Q_0 \; z \ O_x \implies Q_0(1, 0)\\
+    \\ Q'(x_{Q'}, y_{Q'})\\
+    \\ Q_0(\frac{x_Q + x_{Q'}}{2}, \frac{y_Q + y_{Q'}}{2})\\
+    \\\implies 1 = \frac{1 + x_{Q'}}{2}, \quad 0 = \frac{1 + y_{Q'}}{2}\\
+    \\\implies x_{Q'} = 1, \; y_{Q'} = -1 \implies Q'(1, -1)\\
+    \\ P_0 \; z \ O_x \implies P_0(2, 0)\\
+    \\ P'(x_{P'}, y_{P'})\\
+    \\ P_0(\frac{x_P + x_{P'}}{2}, \frac{y_P + y_{P'}}{2})\\
+    \\\implies 2 = \frac{2 + x_{P'}}{2}, \quad 0 = \frac{4 + y_{P'}}{2}\\
+    \\\implies x_{P'} = 2, \; y_{P'} = -4 \implies P'(2, -4)\\
+    \\ l \begin{cases}
+        z \; P(2, 4)\\
+        z \; Q'(1, -1)
+    \end{cases}\\
+    \\\\\implies l: \begin{vmatrix}
+        x - 1 & y + 1\\
+        2 - 1 & 4 + 1\\
+    \end{vmatrix} = 0\\
+    \\\\ \begin{vmatrix}
+        x - 1 & y + 1\\
+        1 & 5\\
+    \end{vmatrix} = 0\\
+    \\\\ l : 5x - 5 - y - 1 = 0\\
+    \\ l : 5x - y - 6 = 0\\
+    \\ l' \begin{cases}
+        z \; Q(1, 1)\\
+        z \; P'(2, -4)
+    \end{cases}\\
+    \\\\\implies l': \begin{vmatrix}
+        x - 1 & y - 1\\
+        2 - 1 & -4 - 1\\
+    \end{vmatrix} = 0\\
+    \\\\ \begin{vmatrix}
+        x - 1 & y - 1\\
+        1 & -5\\
+    \end{vmatrix} = 0\\
+    \\\\ l' : -5x + 5 - y + 1 = 0\\
+    \\ l' : -5x - y + 6 = 0\)
 \end{document}
