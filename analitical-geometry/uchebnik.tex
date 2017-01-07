@@ -110,4 +110,79 @@
     \\d(M, g) = d(M, M_0) = |\vectr{MM_0}| \; (\varepsilon \cap g = M_0, \; \varepsilon \; z \; M, \; \varepsilon \perp g)\\
     \\\vectr{MM_0}(2, 1, -3)\\
     \\|\vectr{MM_0}| = \sqrt{4 + 1 = 9} = \sqrt{14}\)
+    \subsection{Задача 3.}
+    Да се намери трансферзалата на правите
+    \\\(a \begin{cases}
+        x = 3 + \lambda\\
+        y = -1 + 2\lambda & \lambda \in \mathbb{R}\\
+        z = 4\lambda
+    \end{cases} \quad b \begin{cases}
+        x = -2 + 3\mu\\
+        y = -1 & \mu \in \mathbb{R}\\
+        z = 4 - 5\mu
+    \end{cases}\)
+    \\минаваща през точката \(P(1, 1, 1)\)\\
+    Решение:
+    \\\\\(a \begin{cases}
+        z \; A(3, -1, 0)\\
+        \parallel \vectr{a}(1, 2, 4)
+    \end{cases}\\
+    \\\\\alpha \begin{cases}
+        z \; P(1, 1, 1)\\
+        z \; A(3, -1, 0)\\
+        \parallel \vectr{a}(1, 2, 4)
+    \end{cases}\\
+    \\\\\vectr{AP}(-2, 2, 1)\\
+    \\\vectr{AP} \times \vectr{a} \left(\begin{vmatrix}
+        2 & 1\\
+        2 & 4
+    \end{vmatrix}, \begin{vmatrix}
+        1 & -2\\
+        4 & 1
+    \end{vmatrix}, \begin{vmatrix}
+        -2 & 2\\
+        1 & 2
+    \end{vmatrix}\right)\\
+    \\\vectr{AP} \times \vectr{a} (6, 9, -6) \parallel \vectr{q}(2, 3, -2)\\
+    \\\alpha \begin{cases}
+        z \; P(1, 1, 1)\\
+        \perp \vectr{q}(2, 3, -2)
+    \end{cases}\\
+    \\\alpha : 2(x - 1) + 3(y - 1) - 2(z - 1) = 0\\
+    \\\alpha : 2x - \stkout{2} + 3y - 3 - 2z + \stkout{2} = 0\\
+    \\\alpha : 2x + 3y - 2z - 3 = 0\\
+    \\b \begin{cases}
+        z \; B(-2, -1, 4)\\
+        \parallel \vectr{b}(3, 0, -5)
+    \end{cases}\\
+    \\\\\beta \begin{cases}
+        z \; P(1, 1, 1)\\
+        z \; B(-2, -1, 4)\\
+        \parallel \vectr{b}(3, 0, -5)
+    \end{cases}\\
+    \\\\\vectr{BP}(3, 2, -3)\\
+    \\\vectr{BP} \times \vectr{b} \left(\begin{vmatrix}
+        2 & -3\\
+        0 & -5
+    \end{vmatrix}, \begin{vmatrix}
+        -3 & 3\\
+        -5 & 3
+    \end{vmatrix}, \begin{vmatrix}
+        3 & 2\\
+        3 & 0
+    \end{vmatrix}\right)\\
+    \\\vectr{BP} \times \vectr{b}(-10, 6, -6) \parallel \vectr{w}(-5, 3, -3)\\
+    \\\beta \begin{cases}
+        z \; P(1, 1, 1)\\
+        \perp \vectr{w}(-5, 3, -3)
+    \end{cases}\\
+    \\\beta : -5(x - 1) + 3(y - 1) - 3(z - 1) = 0\\
+    \\\beta : -5x + 5 + 3y - \stkout{3} -3z + \stkout{3} = 0\\
+    \\\beta : -5x + 3y - 3z + 5 = 0 \; |-1\\
+    \\\beta : 5x - 3y  + 3z - 5 = 0\\
+    \\t \begin{cases}
+        2x + 3y - 2z - 3 = 0\\
+        5x - 3y  + 3z - 5 = 0
+    \end{cases}
+    \)
 \end{document}
