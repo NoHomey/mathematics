@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+\usepackage[normalem]{ulem}
+\usepackage{tikz}
+
+\newcommand{\vectr}{\overrightarrow}
+\newcommand{\stkout}[1]{\ifmmode\text{\sout{\ensuremath{#1}}}\else\sout{#1}\fi}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \section{Глава 3 Уравнения на права и равнина в пространството}
+    \subsection{Задача 1.}
+    Да се намери точка \(M'\), ортогонално симетрична\\
+    на точката \(M(1, 1, 2)\) относно равнината \(\varepsilon\), определена с точките\\
+    \(M_1(5, 10, 0), \; M_2(4, 0 ,-7), \; M_3(2, 4, -5)\). Да се определят и директорните\\
+    косинуси в посока от \(M\) към \(M'\)\\
+    Решение:
+    \\\(\varepsilon \begin{cases}
+        z \; M_1(5, 10, 0)\\
+        z \; M_2(4, 0 ,-7)\\
+        z \; M_3(2, 4, -5)
+    \end{cases}\\
+    \\\\\varepsilon : \begin{vmatrix}
+        x - 5 & y - 10 & z\\
+        -1 & -10 & -7\\
+        -3 & -6 & -5
+    \end{vmatrix} = 0\\
+    \\\varepsilon : 50(x - 5) + 21(y - 10) + 6z - 30z -42(x - 5) - 5(y - 10) = 0\\
+    \\\varepsilon : 8(x - 5) + 16(y - 10) - 24z = 0 \; | \frac{1}{8}\\
+    \\\varepsilon : x - 5 + 2(y - 10) - 3z = 0\\
+    \\\varepsilon : x + 2y - 3z - 25 = 0\\
+    \\N_{\varepsilon}(1, 2, -3) \perp \varepsilon\\
+    \\\\g \begin{cases}
+        z \; M(1, 1, 2)\\
+        \parallel N_{\varepsilon}(1, 2, -3)
+    \end{cases}\\
+    \\\\g \begin{cases}
+        x = 1 + \lambda\\
+        y = 1 + 2\lambda\\
+        z = 2 - 3\lambda
+    \end{cases}\\
+    \\g \cap \varepsilon = M_0(x_0, y_0, z_0)\\
+    \\1 + \lambda_0 + 2 + 4\lambda_0 - 6 + 9\lambda_0 - 25 = 0\\
+    \\14\lambda_0 = 28 \implies \lambda_0 = 2 \implies M_0(3, 5, -4)\\
+    \\M'(x', y', z')
+    \\M_0(\frac{x_M + x'}{2}, \frac{y_M + y'}{2}, \frac{z_M + z'}{2})\\
+    \\3 = \frac{1 + x'}{2} \quad 5 = \frac{1 + y'}{2} \quad -4 = \frac{2 + z'}{2}\\
+    \\x' = 5 \quad y' = 9 \quad z = -10\\
+    \\\implies M'(5, 9, -10)\\
+    \\\vectr{MM'}(4, 8 , -12) \parallel \vectr{q}(1, 2, -3)\\
+    \\\implies \vectr{n_q} = \frac{\vectr{q}}{|\vectr{q}|}\\
+    \\|\vectr{q}| = \sqrt{1 + 4 + 9} = \sqrt{14}\\
+    \\\vectr{n_q}(\frac{1}{14}, \frac{2}{14}, -\frac{3}{14})\\
+    \\\text{Директроните косинуси съвпадат с кординатите на } \vectr{n_q}\)
+\end{document}
