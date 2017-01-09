@@ -212,7 +212,7 @@
     \\-7\mu - \lambda - \stkout{4} + 4\mu - 4\lambda - \stkout{4} - 3\mu - \lambda + \stkout{8} = 0\\
     \\-6\mu - 6\lambda = 0 \; | -\frac{1}{6}\\
     \\\mu + \lambda = 0\\
-    \\\\749\mu + 7\lambda + \stkout{28} + 4\mu - 4\lambda - \stkout{4} + 9 \mu + 3\lambda - \stkout{24} = 0\\
+    \\49\mu + 7\lambda + \stkout{28} + 4\mu - 4\lambda - \stkout{4} + 9 \mu + 3\lambda - \stkout{24} = 0\\
     \\62\mu + 6\lambda = 0 \; | \frac{1}{2}\\
     \\31\mu + 3\lambda = 0\\
     \\\lambda = - \mu\\
@@ -230,6 +230,36 @@
     \end{cases}\\
     \\d(P_1, P_2) = |\vectr{P_1P_2}| = |-2||\vectr{q}| = 2\sqrt{4 + 1 + 16} = 2\sqrt{21}\)
     \section{Ръководство по АГ - В.Михова}
+    \subsection{Задача 259. в)}
+    Да се намери трансферзалата на правите
+    \\\(a \begin{cases}
+        x = 3 + s\\
+        y = -1 + 2s & s \in \mathbb{R}\\
+        z = 4s
+    \end{cases} \quad b \begin{cases}
+        x = -2 + 3k\\
+        y = -1 & k \in \mathbb{R}\\
+        z = 4 - 5k
+    \end{cases}\)
+    \\Ако трансферзалата лежи в равнината
+    \\\(\alpha : x - 3y + z - 5 = 0\\
+    \\a \cap \alpha = A(-2 + 3k, -1 + 2s, 4s)\\
+    \\3 + s - 3(- 1 + 2s) + 4s - 5 = 0\\
+    \\3 + s + 3 - 6s + 4s - 5 = 0\\
+    \\s = 1 \implies A(4, 1, 4)\\
+    \\b \cap \alpha = B(-2 + 3k, -1, 4 - 5k)\\
+    \\-2 + 3k + 3 + 4 - 5k -5 = 0\\
+    \\k = 0 \implies B(-2, -1, 4)\\
+    \\\vectr{AB}(-6, -2, 0) \parallel \vectr{q}(3, 1, 0)\\
+    \\AB \begin{cases}
+        z \; A(4, 1, 4)\\
+        \parallel \vectr{q}(3, 1, 0)
+    \end{cases}\\
+    \\\implies AB \begin{cases}
+        x = 4 + \upsilon\\
+        y = 1 + \upsilon & \upsilon \in \mathbb{R}\\
+        z = 4
+    \end{cases}\)
     \subsection{Задача 262.}
     Да се намери оста на кръстосаните прави
     \\\(l \begin{cases}
@@ -295,5 +325,65 @@
         x = 7 + 2\tau\\
         y = 3 + \tau & \tau \in \mathbb{R}\\
         z = 9 + 4\tau
+    \end{cases}\)
+    \subsection{Задача 262. II Начин}
+    Да се намери оста на кръстосаните прави
+    \\\(l \begin{cases}
+        x = 7 + s\\
+        y = 3 + 2s & s \in \mathbb{R}\\
+        z = 9 - s
+    \end{cases} \quad m \begin{cases}
+        x + 2y + z - 6 = 0\\
+        x + 5y - z - 7 = 0
+    \end{cases}\\
+    \\\begin{array}{lcl}
+        x & = & 6 - z - 2y\\
+        x & = & 7 + z - 5y\\
+        6 - z - 2y & = & 7 + z - 5y\\
+        1 + 2z - 3y & = & 0\\
+        2z + 1 & = & 3y
+    \end{array}\\
+    \\\begin{array}{lcl}
+        x & = & 6 - z - 2y\\
+        2z + 1 & = & 3y
+    \end{array}\\
+    \\M_1(3, 1, 1), \; M_2(-4, 3, 4), \; \vectr{M_1M_2}(-7, 2, 3)\\
+    \\m \begin{cases}
+        x = 3 - 7k\\
+        y = 1 + 2k & k \in \mathbb{R}\\
+        z = 1 + 3k
+    \end{cases}\\
+    \\\\l \begin{cases}
+        z \; L(7, 3, 9)\\
+        \parallel \vectr{l}(1, 2, -1)
+    \end{cases} m \begin{cases}
+        z \; M(3, 1, 1)\\
+        \parallel \vectr{m}(-7 , 2, 3)
+    \end{cases}\\
+    \\P_1(7 + s, 3 + 2s 9 - s)\\
+    \\P_2(3 - 7k, 1 + 2k, 1 + 3k)\\
+    \\\vectr{P_1P_2}(-7k - s - 4, 2k - 2s -2, 3k + s -8)\\
+    \\\begin{array}{lcl}
+        \vectr{P_1P_2}\vectr{a} & = & 0\\
+        \vectr{P_1P_2}\vectr{b} & = & 0
+    \end{array}\\
+    \\-7k - s - \stkout{4} + 4k - 4s - \stkout{4} - 3k - s + \stkout{8} = 0\\
+    \\-6k - 6s = 0 \; | -\frac{1}{6}\\
+    \\k + s = 0\\
+    \\49k + 7s + \stkout{28} + 4k - 4s - \stkout{4} + 9 k + 3s - \stkout{24} = 0\\
+    \\62k + 6s = 0 \; | \frac{1}{2}\\
+    \\31k + 3s = 0\\
+    \\s = - k\\
+    \\28k = 0 \implies k = s = 0\\
+    \implies P_1 \equiv L(7, 3, 9), \; P_2 \equiv M(3, 1, 1)\\
+    \\\vectr{P_1P_2}(-4, -2, -8) \parallel \vectr{q}(2, 1, 4)\\
+    \\t \begin{cases}
+        z \; P_1(7, 3, 9)\\
+        \parallel{q}(2, 1, 4)
+    \end{cases}\\
+    \\\implies t \begin{cases}
+        x = 7 + 2\upsilon\\
+        y = 3 + \upsilon & \upsilon \in \mathbb{R}\\
+        z = 9 + 4\upsilon
     \end{cases}\)
 \end{document}
