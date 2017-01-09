@@ -183,6 +183,50 @@
     \\t \begin{cases}
         2x + 3y - 2z - 3 = 0\\
         5x - 3y  + 3z - 5 = 0
-    \end{cases}
-    \)
+    \end{cases}\)
+    \subsection{Задача 3.}
+    Да се намерият ъравнението на оста отсечка и дължината на оста-отсечка на кръстосаните правите
+    \\\(a \begin{cases}
+        x = 7 + \lambda\\
+        y = 3 + 2\lambda & \lambda \in \mathbb{R}\\
+        z = 9 - \lambda
+    \end{cases} b \begin{cases}
+        x = 3 - 7\mu\\
+        y = 1 + 2\mu & \mu \in \mathbb{R}\\
+        z = 1 + 3\mu
+    \end{cases}\\
+    \\\\a \begin{cases}
+        z \; A(7, 3, 9)\\
+        \parallel \vectr{a}(1, 2, -1)
+    \end{cases} b \begin{cases}
+        z \; B(3, 1, 1)\\
+        \parallel \vectr{b}(-7 , 2, 3)
+    \end{cases}\\
+    \\P_1(7 + \lambda, 3 + 2\lambda, 9 - \lambda)\\
+    \\P_2(3 - 7\mu, 1 + 2\mu, 1 + 3\mu)\\
+    \\\vectr{P_1P_2}(-7\mu - \lambda - 4, 2\mu - 2\lambda -2, 3\mu + \lambda -8)\\
+    \\\begin{array}{lcl}
+        \vectr{P_1P_2}\vectr{a} & = & 0\\
+        \vectr{P_1P_2}\vectr{b} & = & 0
+    \end{array}\\
+    \\-7\mu - \lambda - \stkout{4} + 4\mu - 4\lambda - \stkout{4} - 3\mu - \lambda + \stkout{8} = 0\\
+    \\-6\mu - 6\lambda = 0 \; | -\frac{1}{6}\\
+    \\\mu + \lambda = 0\\
+    \\\\749\mu + 7\lambda + \stkout{28} + 4\mu - 4\lambda - \stkout{4} + 9 \mu + 3\lambda - \stkout{24} = 0\\
+    \\62\mu + 6\lambda = 0 \; | \frac{1}{2}\\
+    \\31\mu + 3\lambda = 0\\
+    \\\lambda = - \mu\\
+    \\28\mu = 0 \implies \mu = \lambda = 0\\
+    \implies P_1 \equiv A(7, 3, 9), \; P_2 \equiv B(3, 1, 1)\\
+    \\\vectr{P_1P_2}(-4, -2, -8) \parallel \vectr{q}(2, 1, 4)\\
+    \\t \begin{cases}
+        z \; P_2(3, 1, 1)\\
+        \parallel{q}(2, 1, 4)
+    \end{cases}\\
+    \\\implies t \begin{cases}
+        x = 3 + 2\upsilon\\
+        y = 1 + \upsilon & \upsilon \in \mathbb{R}\\
+        z = 1 + 4\upsilon
+    \end{cases}\\
+    \\d(P_1, P_2) = |\vectr{P_1P_2}| = |-2||\vectr{q}| = 2\sqrt{4 + 1 + 16} = 2\sqrt{21}\)
 \end{document}
