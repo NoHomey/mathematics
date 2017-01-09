@@ -184,13 +184,13 @@
         2x + 3y - 2z - 3 = 0\\
         5x - 3y  + 3z - 5 = 0
     \end{cases}\)
-    \subsection{Задача 3.}
+    \subsection{Задача 4.}
     Да се намерият ъравнението на оста отсечка и дължината на оста-отсечка на кръстосаните правите
     \\\(a \begin{cases}
         x = 7 + \lambda\\
         y = 3 + 2\lambda & \lambda \in \mathbb{R}\\
         z = 9 - \lambda
-    \end{cases} b \begin{cases}
+    \end{cases} \quad b \begin{cases}
         x = 3 - 7\mu\\
         y = 1 + 2\mu & \mu \in \mathbb{R}\\
         z = 1 + 3\mu
@@ -229,4 +229,71 @@
         z = 1 + 4\upsilon
     \end{cases}\\
     \\d(P_1, P_2) = |\vectr{P_1P_2}| = |-2||\vectr{q}| = 2\sqrt{4 + 1 + 16} = 2\sqrt{21}\)
+    \section{Ръководство по АГ - В.Михова}
+    \subsection{Задача 262.}
+    Да се намери оста на кръстосаните прави
+    \\\(l \begin{cases}
+        x = 7 + s\\
+        y = 3 + 2s & s \in \mathbb{R}\\
+        z = 9 - s
+    \end{cases} \quad m \begin{cases}
+        x + 2y + z - 6 = 0\\
+        x + 5y - z - 7 = 0
+    \end{cases}\)\\
+    \\\(m\) е зададена като пресечница на две равнини \(\implies \exists\) сноп равнини пресичащисе в \(m\)
+    \\ Нека \(\alpha\) е равнина от снопа и \(\alpha \parallel l\)
+    \\\(l \begin{cases}
+        z \; L(7, 3, 9)\\
+        \parallel \vectr{l}(1, 2, -1)
+    \end{cases}\\
+    \\\alpha : \lambda(x + 2y + z - 6) + \mu(x + 5y - z - 7) = 0\\
+    \\\alpha : (\lambda + \mu)x + (2\lambda + 5\mu)y + (\lambda - \mu)z - 6\lambda - 7\mu = 0\\
+    \\\implies \vectr{n_\alpha}(\lambda + \mu, 2\lambda + 5\mu, \lambda - \mu) \perp \alpha\\
+    \\\implies \vectr{n_\alpha} \perp l \implies \vectr{n_\alpha} \perp \vectr{l} \implies \vectr{n_\alpha}\vectr{l} = 0\\
+    \\1(\lambda + \mu) + 2(2\lambda + 5\mu) -1(\lambda - \mu) = 0\\
+    \\\stkout{\lambda} + \mu  + 4\mu + 10\mu - \stkout{\lambda} + \mu = 0\\
+    \\4\lambda + 12\mu = 0 \; |\frac{1}{4}\\
+    \\\lambda + 3\mu = 0 \implies \lambda = -3\mu\\
+    \\\mu = -1 \implies \lambda = 3 \implies \vectr{n_\alpha}(2, 1, 4)\\
+    \\\implies \alpha : 2x + y + 4z - 11 = 0\\
+    \\p \begin{cases}
+        z \; L(7, 3, 9)\\
+        \parallel \vectr{n_\alpha}(2, 1, 4)
+    \end{cases}\\
+    \\\implies p \begin{cases}
+        x = 7 + 2k\\
+        y = 3 + k & k \in \mathbb{R}\\
+        z = 9 + 4k
+    \end{cases}\\
+    \\p \cup \alpha = P\\
+    \\\implies 2(7 + 2k) + 3 + k + 4(9 + 4k) - 11 = 0\\
+    \\14 + 4k + 3 + k + 36 + 16k - 11 = 0\\
+    21k = -42 \implies k = -2\\
+    \implies P(3, 1, 1)\\
+    \\l_0 \begin{cases}
+        z \; P(3, 1, 1)\\
+        \parallel \vectr{l}(1, 2, -1)
+    \end{cases}
+    \\\\l_0 \begin{cases}
+        x = 3 + \upsilon\\
+        y = 1 + 2\upsilon & \upsilon \in \mathbb{R}\\
+        z = 1 - \upsilon
+    \end{cases}\\
+    \\l_0 \cup m = M\\
+    \\m \begin{cases}
+        x + 2y + z - 6 = 0\\
+        x + 5y - z - 7 = 0
+    \end{cases}\\
+    \\\stkout{3} + \stkout{\upsilon} + \stkout{2} + 4\upsilon + \stkout{1} - \stkout{\upsilon} - \stkout{6} = 0 \implies \upsilon = 0\\
+    \\\implies M(3, 1, 1)\\
+    \\t \begin{cases}
+        z \; L(7, 3, 9)\\
+        z \; M(3, 1, 1)\\
+        \parallel \vectr{ML}(4, 2, 8) \parallel \vectr{t}(2, 1, 4)
+    \end{cases}\\
+    \\\implies t \begin{cases}
+        x = 7 + 2\tau\\
+        y = 3 + \tau & \tau \in \mathbb{R}\\
+        z = 9 + 4\tau
+    \end{cases}\)
 \end{document}
